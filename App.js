@@ -4,8 +4,8 @@ import { StyleSheet, Text, TextInput, View, Image } from 'react-native';
 
 export default function App() {
   
-  const [text1, setText1] = useState('')
-  const [text2, setText2] = useState('')
+  const [text1, setText1] = useState('');
+  const [text2, setText2] = useState('');
   
   
   const changeVowels = (t) => {
@@ -15,9 +15,9 @@ export default function App() {
   
   //coloca os textos na imagem.
   const write = (t) => {
-    setText1(t)
+    setText1(t);
     setText2(changeVowels(t));
-  }
+  };
 
   return (
     <View style={styles.container}>
@@ -32,13 +32,13 @@ export default function App() {
       </View>
 
       <View style={styles.area}>
-        <Text style={[styles.text, styles.text1]}>{text1.toUpperCase()}</Text>
-        <Image style={styles.mike} source={require('./img/miko-hughes.jpg')}/>
-        <Text style={[styles.text, styles.text2]}>{text2.toUpperCase()}</Text>
+        <Text style={[styles.text, styles.text1]}> {text1.toUpperCase()} </Text>
+        <Image style={styles.mike} source={require('./img/miko-hughes.jpg')} />
+        <Text style={[styles.text, styles.text2]}> {text2.toUpperCase()} </Text>
       </View>
     </View>
-  );
-}
+  )
+};
 
 const styles = StyleSheet.create({
   container:{
